@@ -39,7 +39,7 @@ function sendOrderToWhatsApp() {
 
     // --- IMPORTANT: Replace with the actual business WhatsApp number ---
     // Use the international format without '+' or spaces. E.g., for Chile: 56912345678
-    const businessWhatsAppNumber = "56912345678"; 
+    const businessWhatsAppNumber = "56961961556"; 
 
     // Construct the message
     let message = `¡Hola Cookies and Cakes! 👋 Quisiera solicitar un pedido personalizado:\n\n`;
