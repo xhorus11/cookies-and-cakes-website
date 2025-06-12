@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personaliza tu Pedido - Cookies and Cakes</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">Cookies &amp; Cakes</a>
+            <nav class="main-nav">
+                <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul id="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html#productos">Productos</a></li>
+                    <li><a href="personalization.html">Personalización</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Customization Form Section -->
+    <main class="container">
+        <h2 class="section-title">Personaliza tu Pedido</h2>
+        <p class="section-subtitle">Cuéntanos tu idea y la haremos realidad. Completa el formulario y te contactaremos a la brevedad.</p>
+        
+        <form id="customOrderForm" class="custom-form">
+            <div class="form-group">
+                <label for="name">Tu Nombre:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="whatsappPhone">Tu Número de WhatsApp (con código de país):</label>
+                <input type="tel" id="whatsappPhone" name="whatsappPhone" required placeholder="Ej: 56912345678">
+            </div>
+            <div class="form-group">
+                <label for="email">Tu Correo Electrónico (opcional):</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="productType">Tipo de Producto:</label>
+                <select id="productType" name="productType">
+                    <option value="Torta">Torta</option>
+                    <option value="Galletas">Galletas</option>
+                    <option value="Cupcakes">Cupcakes</option>
+                    <option value="Otro">Otro (especificar abajo)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="customDetails">Describe tu idea:</label>
+                <textarea id="customDetails" name="customDetails" rows="6" required placeholder="Ej: Torta para 20 personas, sabor manjar-nuez, con temática de unicornio en tonos pastel y el nombre 'Isidora'."></textarea>
+            </div>
+            <div class="form-group">
+                <label for="pickupDate">Fecha de Retiro Deseada (opcional):</label>
+                <input type="date" id="pickupDate" name="pickupDate">
+            </div>
+            <button type="button" class="btn btn-primary" onclick="sendOrderToWhatsApp()">Enviar Pedido por WhatsApp</button>
+        </form>
+    </main>
+
+    <!-- Footer Section -->
+    <footer id="contacto" class="main-footer-section">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html#productos">Productos</a></li>
+                    <li><a href="personalization.html">Personalización</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Síguenos</h4>
+                <div class="social-media">
+                    <a href="https://www.instagram.com/c_y_c_cookies_and_cakes/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/56912345678" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-column map-container">
+                 <h4>Ubicación para Retiros</h4>
+                <p>La Florida, Santiago, Chile</p>
+                <!-- Replace with your actual Google Maps embed code -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53225.9772345856!2d-70.61834383125!3d-33.513599999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662d007a34965c7%3A0x889856d3b37996a0!2sLa%20Florida%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses-419!2scl!4v1718155099513!5m2!1ses-419!2scl" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; <span id="currentYear"></span> Cookies and Cakes. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/56912345678?text=Hola%20Cookies%20and%20Cakes!%20Tengo%20una%20consulta." class="whatsapp-float" target="_blank" aria-label="Chatea con nosotros en WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
